@@ -1,0 +1,63 @@
+# # BMI Exercise
+
+# Create a simple script that calculates a user’s body mass index.  
+
+# 1. Prompt a user to enter their height (in inches) and their weight (in pounds).  
+height = float(input("Enter your height in inches: "))
+weight = float(input("Enter your weight in pounds: "))
+
+# 2. Next, calculate their BMI using the formula: **(weight in pounds x 703) / (height in inches x height in inches)**
+bmi = float((weight * 703) / (height **2))
+
+# 3. Output a message including their BMI number and category according to the following table:
+msg = f"Your BMI of {bmi:.2f} makes you "
+if (bmi < 16.0):
+    print( msg +"Severely Underweight")
+elif (bmi > 16.0 and bmi < 18.4):
+    print( msg +"Underweight")
+elif (bmi > 18.5 and bmi < 24.9):
+    print( msg +"Normal")
+elif (bmi > 25 and bmi < 29.9):
+    print( msg +"Overweight")
+elif (bmi > 30 and bmi < 34.9):
+    print( msg +" Moderately Obese")
+elif (bmi > 35 and bmi < 39.9):
+    print( msg +" Severely Obese")
+else:
+    print( msg +"Morbidly Obese")
+# > **< 16.0**    Severely Underweight 
+# **16.0 - 18.4**   Underweight
+# **18.5 - 24.9**   Normal
+# **25.0 - 29.9**   Overweight
+# **30.0 - 34.9**   Moderately Obese
+# **35.0 - 39.9**   Severely Obese
+# **> 39.9**   Morbidly Obese
+# > 
+
+# Here’s an example of the script running (user input is in green) : 
+
+# ```
+# enter your height in inches: **74**
+# enter your weight in lbs: **130**
+# Your BMI of 16.68918918918919 makes you Underweight
+# ```
+
+# Another example:
+
+# ```
+# enter your height in inches: **69**
+# enter your weight in lbs: **140**
+# Your BMI of 20.67212770426381 makes you Normal
+# ```
+
+# And one more example:
+
+# ```
+# enter your height in inches: **56**
+# enter your weight in lbs: **240**
+# Your BMI of 53.80102040816327 makes you Morbidly Obese
+# ```
+
+# ### **Bonus**
+
+# The BMI numbers are often really long floats that are ugly to read.  Find a way to round the BMI number to a single decimal place like: `Your BMI of 53.80 makes you Morbidly Obese`
