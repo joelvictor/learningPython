@@ -59,3 +59,46 @@ print(my_list)  # Output: [2, 3, 7, 8, 9]
 # del - Remove the entire list
 del my_list
 # print(my_list)  # This will raise an error because my_list no longer exists
+
+# Initial list
+my_list = [1, 2, 3]
+
+# Unpacking the list into variables
+a, b, c = my_list
+print(a)  # Output: 1
+print(b)  # Output: 2
+print(c)  # Output: 3
+
+# Initial list
+my_list = [1, 2, 3, 4, 5]
+
+# Unpacking with * operator
+a, b, *rest = my_list
+print(a)    # Output: 1
+print(b)    # Output: 2
+print(rest) # Output: [3, 4, 5]
+
+# Unpacking with * operator in the middle
+a, *middle, b = my_list
+print(a)      # Output: 1
+print(middle) # Output: [2, 3, 4]
+print(b)      # Output: 5
+
+# Initial list
+my_list = [1, 2, 3, 4, 5]
+
+# Unpacking and ignoring certain values
+a, _, c, _, e = my_list
+print(a)  # Output: 1
+print(c)  # Output: 3
+print(e)  # Output: 5
+
+# Initial nested list
+nested_list = [1, [2, 3], 4]
+
+# Unpacking nested lists
+a, (b, c), d = nested_list
+print(a)  # Output: 1
+print(b)  # Output: 2
+print(c)  # Output: 3
+print(d)  # Output: 4
