@@ -5,6 +5,10 @@ fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
     print(fruit)
 
+# Loop through a list using range and len
+for i in range(len(fruits)):
+    print(f"Index {i}: {fruits[i]}")
+
 # Loop through a range of numbers
 for i in range(5):
     print(i)
